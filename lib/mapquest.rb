@@ -40,7 +40,7 @@ class MapQuest
     puts '>>>' + params.inspect
     puts '>>>' + req.inspect
     response.new req.query(params), params
-    puts 'response>>>' + response.inspect
+    #puts 'response>>>' + response.inspect
   end
 
 end
