@@ -5,7 +5,6 @@ require "mapquest/request"
 require "mapquest/services/core"
 require "mapquest/services/directions"
 require "mapquest/services/geocoding"
-require 'open-uri'
 
 class MapQuest
 
@@ -34,7 +33,7 @@ class MapQuest
   # * response [Response] The response object of the API being called
   def request(method, params, response)
     req = Request.new method
-    params.merge! :key => URI::encode(api_key)
+    params.merge! :key => api_key
     params.each { |k,v| params.delete(k) if v.nil? }
 
     puts '>>>' + method.inspect
