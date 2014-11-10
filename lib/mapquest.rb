@@ -36,8 +36,8 @@ class MapQuest
     params.merge! :key => api_key
     params.each { |k,v| params.delete(k) if v.nil? }
 
-    puts '>>>' + params
-    puts '>>>' + req
+    puts '>>>' + params.inspect
+    puts '>>>' + req.inspect
     response.new req.query(params), params
   end
 
