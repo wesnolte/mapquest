@@ -2,7 +2,8 @@ class MapQuest
   class Request < RestClient::Resource
 
     # The base url of the mapquest api
-    API_ROOT = 'http://www.mapquestapi.com/%s/v%s/%s'
+    API_ROOT = 'http://ope.mapquestapi.com/%s/v%s/%s'
+    #API_ROOT = 'http://open.mapquestapi.com/directions/v%s/route?key=%s'
 
     def initialize(method)
       super API_ROOT % [method[:location], method[:version], method[:call]]
